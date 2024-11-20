@@ -29,34 +29,36 @@
 | 협업 도구     | <img src="https://img.shields.io/badge/Git-F05032?style=for-the-badge&logo=Git&logoColor=white"/> <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=GitHub&logoColor=white"/> |
 | 인프라 구조     |  <img src="https://img.shields.io/badge/Google Cloud-569A31?style=for-the-badge&logo=Google-Cloud&logoColor=white">|
 
-### ⚙ 시스템 아키텍처
+## ⚙ 시스템 아키텍처
+<hr>
 ![image](https://github.com/user-attachments/assets/8ae65d51-c1a1-45a2-9790-e53b5645be03)
 
 
 
 
-### 📌 SW 유스케이스
+## 📌 SW 유스케이스
+<hr>
 ![image](https://github.com/user-attachments/assets/0ab7d692-8acf-4a12-b934-a47b50ef5814)
 
 
-### 📌 서비스 흐름도
+## 📌 서비스 흐름도
+<hr>
 ![image](https://github.com/user-attachments/assets/7f28993e-eb6b-4e25-bf84-8a892a673b51)
 
 
-### 📌 ER 다이어그램
+## 📌 ER 다이어그램
+<hr>
 ![image](https://github.com/user-attachments/assets/53208b13-095c-4c61-bd6f-5587f832187b)
 
 
-### 🖥 화면 구성
+## 🖥 화면 구성
 ![KakaoTalk_20241119_141557535](https://github.com/user-attachments/assets/eeedcff9-29ca-42f1-bce5-486e678ef586)
 
 
-### 🤾‍♂️ 트러블슈팅
-
-## 1. 다중 Flask 사용으로 인한 메모리 과다 사용
----
-## 원인
-스프링과 실행중 Flask를 사용하는 여러 파이썬 기능 실행중 메모리 과다 사용 및 누수 발생
+## 🤾‍♂️ 트러블슈팅
+<hr>
+### 1. 다중 Flask 사용으로 인한 메모리 과다 사용
+- 원인: 스프링과 실행중 Flask를 사용하는 여러 파이썬 기능 실행중 메모리 과다 사용 및 누수 발생 <br>
 <!--  
 ## 해결방안
 
@@ -83,29 +85,24 @@ Flask는 배우고 사용하기 쉬운 경량 Python 기반 프레임워크입�
 단점<p>
 Flask는 다른 프레임워크에 비해 기본 제공 기능이 적기 때문에 개발자가 구현하는 데 더 많은 노력과 시간이 필요할 수 있습니다. 또한 대규모 웹 애플리케이션을 구축하는 데 적합하지 않을 수도 있습니다.<p>
 -->
-## 선택한 해결 방안
-FastApi
-
+- 선택한 해결 방안: FastApi <br>
 1. 각 기능이 비동기 식으로 일어나는 사이트인 관계로 Flask 보다 FastAPI에 적합<p>
 2. 속도면에서도 약 3배 가까이 빠름<p>
 
+- 결과:
 flask 사용시 예상 면접 질문 추출 30초<p>
 FastAPI 사용시 예상 면접 질문 추출 12초<p>
-
-
 <br>
 <br>
 
-## 2. 기업 분석 최신 동향 뉴스 실시간 적용에서 DB 저장 이후 불러오기
----
-## 원인
+### 문제2. 기업 분석 최신 동향 뉴스 실시간 크롤링
+- 원인:
 뉴스를 제공해주는 사이트가 공격당하거나 점검으로 인해 뉴스 데이터를 못가져옴<p>
 
-## 해결방안
-데이터베이스에 저장 이후 불러오기<p>
-
+- 해결방안:
+스케줄러로 데이터베이스에 저장 이후 요청 시 불러오기<p>
 사이트가 공격당하거나 점검 중에 있으면 DB로 저장이 안되기 때문에 기존 저장된 뉴스를 불러오면서 사용자에게 뉴스를 제공할 수 있음<p>
-## 선택한 해결 방안
+- 결과: 
 스케쥴러를 사용하여 규칙적으로 최신 동향 뉴스를 불러옴<p>
 데이터베이스에 기업분석 뉴스 테이블을 생성<p>
 뉴스 api로 동향 뉴스 데이터를 불러오고 불러온 데이터를 데이터베이스에 저장 이후 기업분석 게시판에서 확인<p>
@@ -113,16 +110,15 @@ FastAPI 사용시 예상 면접 질문 추출 12초<p>
 <br>
 <br>
 
-## 3. 스프링 시큐리티 사용중 S3 연동 불가
----
-## 원인
+### 문제3. 스프링 시큐리티 사용중 S3 연동 불가
+- 원인
 스프링 시큐리티 사용중 AWS S3 연동이 불가 현상 발생<p>
+CSRF 설정을 허용하지 않으면 영상이 클라우드에 저장이 불가능한 현상 발생<p>
 
-## 해결방안
+- 해결방안
 CSRF 인증 허용<p>
 
-## 선택한 해결 방안
-스프링 시큐리티 사용중에 CSRF 설정을 허용하지 않으면 영상이 클라우드에 저장이 불가능한 현상 발생<p>
+- 결과
 CSRF 보안 설정을 허용하고 JSP에서 S3로 영상 저장시 CSRF 토큰을 같이 설정하여 전송<p>
 <br>
 * CSRF : 웹 애플리케이션이 신뢰하는 사용자로부터 승인되지 않은 명령이 제출되는 웹 사이트 또는 웹 애플리케이션에 대한 일종의 악의적인 공격 <p>
