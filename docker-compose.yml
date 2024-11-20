@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  ip-spring:
+    build: .
+    image: ip-spring:latest
+    container_name: ip-spring
+    ports:
+      - "8081:8081"
+#    volumes:
+#      - ./logs:/app/logs  # 로그 파일을 호스트와 공유 (필요한 경우)
+    restart: always
+
+  # Python 뉴스 수집기 서비스 추가
+  news-collector:
+    build:
+      context: ./python  # Python 프로젝트 디렉토리
+      dockerfile: Dockerfile  # Python용 Dockerfile
+    image: news-collector:latest
+    container_name: news-collector
+    volumes:
+      - ./python/logs:/app/logs
+      - ./python/api_key.txt:/app/api_key.txt:ro
+    restart: always
+
+## 네트워크 정의
+#networks:
+#  app-network:
+#    driver: bridge  # 기본 브리지 네트워크

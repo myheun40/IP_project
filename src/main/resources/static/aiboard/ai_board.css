@@ -1,0 +1,221 @@
+body {
+    font-family:  'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    display:flex;
+    flex-direction: column;
+}
+
+.card {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    background-color: white;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#card-body{
+    text-align:center;
+}
+
+
+/* Jumbotron styling */
+.jumbotron {
+    background-image: url('/resources/static/img/ai-banner11.png');
+    background-size: cover; /* 배경 이미지가 요소를 꽉 채우도록 설정 */
+    background-position: center; /* 배경 이미지가 가운데에 위치하도록 설정 */
+    background-repeat: no-repeat; /* 이미지 반복을 막음 */
+    color: #fff;
+    /*border-radius: 10px;*/
+    padding: 2.5rem 9.5rem;
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+    margin-top:70px;
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+    font-family: 'Noto Sans KR';
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+    font-family: 'Noto Sans KR';
+}
+
+.content {
+    padding:50px 10% 0 10%;
+    display:flex;
+    flex-direction: column;
+    align-items:flex-start;
+    font-family:'Noto Sans KR';
+}
+
+.title{
+    font-weight: bold;
+    text-align:center;
+    margin-top:20px;
+    font-family:'Noto Sans KR';
+    /* position:relative;
+    bottom:150px; */
+}
+
+.h-title{
+    font-weight: bold;
+    text-align:left;
+    font-family:'Noto Sans KR';
+}
+.container{
+    display:flex;
+    gap:50px;
+    justify-content: center;
+    margin-top:20px;
+}
+
+.progress.w-100.mb-5{
+    height:18px;
+}
+.progress .progress-bar.bar {
+    text-align:center;
+    height: 100%; /* 프로그레스 바 높이 설정 */
+}
+
+.progress .progress-bar.bar{
+    background-color: rgb(108 124 228);
+}
+
+.progress .progress-bar.stage{
+    background-color: rgb(255 255 255);
+    border-radius:5%;
+    color: #605a5a;
+    border: 3px solid #cfcfcf;
+}
+
+#box1{
+    background-color: rgb(97 117 171);
+    border:none;
+    color: white;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#box1:hover {
+    background-color: rgb(76, 93, 138);
+}
+
+#box2{
+    background-color: rgb(120 180 203);
+    border:none;
+    color:white;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+
+#box2:hover{
+    background-color: rgb(92 139 157);
+}
+
+.box-title{
+    margin:30px;
+}
+
+.circle-arrow {
+    margin: 10px auto; /* 위쪽 여백과 가운데 정렬 */
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.8); /* 동그라미 색상 */
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.arrow-icon {
+    font-size: 20px; /* 화살표 크기 */
+    color: #7b7b7b; /* 화살표 색상 */
+}
+
+#next{
+    background-color: #31628b;
+    border-color: #31628b;
+}
+
+
+table td{
+    padding: 10px 0;
+}
+
+
+
+/* 모달 창 스타일 */
+.modal {
+    display: none; /* 기본적으로 숨김 */
+    position: fixed; /* 화면에 고정 */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* 반투명 배경 */
+    z-index: 1; /* 모달이 다른 요소들 위에 뜨도록 설정 */
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: 15% auto; /* 화면 중앙으로 위치 조정 */
+    padding: 0 20px 20px 20px;
+    border-radius: 8px;
+    width: 80%; /* 팝업 창 크기 */
+    max-width: 800px;
+}
+
+.close {
+    color: #000000;
+    margin-left: 97%;
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.close:hover,
+.close:focus {
+    color: darkred;
+    cursor: pointer;
+}
+
+.progress-container {
+    display: flex;
+    width: 70%;
+    margin: 20px 0;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.progress-stage {
+    flex: 1;
+    padding: 10px;
+    text-align: center;
+    color: #555555;
+    font-weight: bold;
+    border-top: 3px solid transparent;
+    border-bottom: 3px solid transparent;
+    transition: border-color 0.3s ease;
+}
+.progress-stage span{
+    font-weight: bold;
+}
+/* Stage 1~3 테두리 색상 */
+.progress-stage.green-border {
+    border-top-color: rgb(97 117 171);
+    border-bottom-color:rgb(97 117 171);
+}
+
+/* Stage 4~5 테두리 색상 */
+.progress-stage.blue-border {
+    border-top-color: rgb(120 180 203);
+    border-bottom-color: rgb(120 180 203);
+}
+
+/* 각 스테이지 구분선 추가 */
+.progress-stage:not(:last-child) {
+    border-right: 1px solid #ddd;
+}

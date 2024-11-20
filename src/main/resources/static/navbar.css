@@ -1,0 +1,224 @@
+/* 기본 리셋 및 폰트 설정 */
+#header {
+  font-family: 'Noto Sans KR', sans-serif;
+  font-weight: bold;
+  z-index: 1000;
+  background-color: #f8f9fa;
+}
+
+/* 네비게이션 바 기본 설정 */
+.navbar {
+  height: 70px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fdfdfd;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+/* 로고 설정 */
+#logo {
+  height: 45px;
+  min-width: 80px;
+}
+
+/* 좌측 네비게이션 */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 0 20px;
+  flex-wrap: nowrap;
+  min-width: 500px;
+}
+
+.nav-link {
+  white-space: nowrap;
+  font-size: 16px;
+  color: #000;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  color: #27507e;
+}
+
+/* 우측 네비게이션 */
+.nav-right {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+}
+
+.nav-right-btn {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+/* 버튼 스타일 */
+.mypage-btn, .mypage-btn2, .join-btn {
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+}
+
+.mypage-btn {
+  background-color: white;
+  color: black;
+  border: 2px solid rgb(74, 72, 72);
+}
+
+.mypage-btn2 {
+  background-color: rgb(18, 18, 18);
+  color: rgb(246, 246, 246);
+  border: 2px solid rgb(74, 72, 72);
+}
+
+.login-btn {
+  padding: 8px 20px;
+  border-radius: 50px;
+  font-size: 14px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: all 0.3s ease;
+  background-color: black;   /* 추가 */
+  color: white;             /* 추가 */
+  border: none;            /* 추가 */
+}
+
+.login-btn:hover {
+  background-color: #333;  /* 추가 */
+}
+
+/* 아이콘 이미지 */
+.nav-right img {
+  height: 24px;
+  width: 24px;
+  margin: 0 5px;
+}
+
+/* 배지 스타일 */
+.badge {
+  font-size: 10px;
+  color: #e91c1c;
+  font-weight: bold;
+  position: absolute;
+  top: 20px;
+  padding: 1px 4px;
+}
+
+/* 반응형 디자인 */
+@media screen and (max-width: 1024px) {
+  .nav-left {
+    gap: 15px;
+    padding: 0 10px;
+    min-width: auto;
+  }
+
+  .nav-right-btn {
+    gap: 10px;
+  }
+
+  .mypage-btn, .mypage-btn2, .login-btn, .join-btn {
+    padding: 6px 15px;
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar {
+    height: auto;
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .nav-left, .nav-right {
+    width: 100%;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .nav-link {
+    font-size: 14px;
+  }
+
+  .nav-right-btn {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  #logo {
+    height: 20px;
+  }
+  .navbar {
+    position: relative;
+    height: auto;
+  }
+
+  .main-content {
+    margin-top: 0;
+  }
+
+  .mypsidebar-container {
+    margin-top: 0;
+  }
+}
+
+/* 모바일 메뉴 토글 버튼 */
+.mobile-menu-btn {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .mobile-menu-btn {
+    display: block;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }
+
+  .nav-left, .nav-right {
+    display: none;
+  }
+
+  .nav-left.active, .nav-right.active {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.logout-btn {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  outline: none;
+}
+
+/* 혹시 hover 효과가 있다면 그것도 제거 */
+.logout-btn:hover {
+  background: none;
+  border: none;
+}
+
+/* 포커스 테두리도 제거 */
+.logout-btn:focus {
+  outline: none;
+  box-shadow: none;
+}

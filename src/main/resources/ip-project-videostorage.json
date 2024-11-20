@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "ip-project-videostorage",
+  "private_key_id": "24541ae31c8e052a7bb0a0dae55120d5be418826",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQCjU57YKpj/msPV\nwuc6yd47xpFwpz/J7XqNcWGXUGLlNNJVX0gyTVinqv2zktYumXPqaDBRYqoqFlG6\nr0t1mTTExttJUKlGL5eN5xqqMDfUADp5iO88EUz1xtourI8o3L6e4HnXp8Dm3/10\nq/u3BjdfLJj0kfW8Lso+tfZ0OqOEPSmL9psmuzaOktPR9ju85eB2kdRbIvX8C6kv\nKMuC2xIarqyXW+fC2grk5YLKSBgOT7/5ryswa1s9uyey3ySwB0ufv2GzKk5VNnV5\n6xySbi+i+LwzDF0kuK54nQiBimu+1N7bbgZtxqZcpRmnUhkQL8CtAuD2wj8YucMf\nYX7rl1VZAgMBAAECggEABJ2Y49I8DR8CyLcEgClamKoD1bws37NQnJ7V4vk0rB23\nB/rDRyu38XDFs3HXGgFCyqiuprp0FCtU133WtYwAKE1ODZ9bjPpzy8Nc5IxdXusU\nRdAR3S0+cv+qeqiTwF3zavk8RJABT4ASYTaz89WhXoFDJLRla/S2PzvoIVa/0QJO\nNDcEVULZbr2fEqv/wuTgLIajb9gYpsfc1ffAWzdPjXODHCAgI/deIHarTZ1iE1fv\nX4cQQAJvO0kvY7Lcpwq3YRGiCJKxguXrmTpLZcKHtEZVSCCRqW9FNwHVJVtVz0cJ\nsgA2ieTPq2DICVBX4BeI1R0RCxVHu+SeWt+LE8/lNQKBgQDa3Xt/DRnr3bWivlAP\n/CGJyDdenYFQoH/sRoDA3WoBmRzH73hOgFroynvZ8O8Mp2660FygjrZGy5fXgQkm\nCNKSBvPxfajHctC844mX8m8FMzFotDCtt5m1g87ByzRFASkJCvEzAtw5NNC243HO\na5jaCE9fg5qibyJXRdMXQboIlwKBgQC/CcttQHo6QaaTpzVXmFw50mx0kXmkPKao\nzglRCcuRoP2j7rDKnS+UBb1GOYfe3jToW5CPX9RAylSeZwyLWz0RBrDqzkfFE9UM\ntob8XzZDaFdfneeR2JKDAL1T+g10bu/dtYPM+F2Kp/FYQfUojEeqvuR6kjXSMddq\njyG/P3ffjwKBgBKx5ICfv90T3RX/p5sV8E9ymLguQAOBEiw+gXT39LwaNgkl/WLH\nN/y2fwnIuMKd8qlmbuMQDaXSci/oR73F9yaeDWxNTYNr3USlMvWVscIB83B8I8RS\n8IA+uAR5tQdH6BdrpdqzndgNGN7mYqw9KJtHJnCEL0s8rvRBdJyB8sAVAoGBAJK7\n0TaPSdKpTmsnCX/IlT4MdCVs/8O4mkIaT2mhXmzy/R8HXV+jMEI/zku8MLJsdrLq\ncbTOZFeHkUtB147Ke7MyMn2IB/RF8WScZj4+W42W/VWCEbYiZRaeYM25yM/fzfm7\nTAsJ0b+Ik4W407dbWEi76v6Cgzh58/3zBnbBJy/dAoGAJJMFPXclCvSOahiwL2oX\nb3ykDR6bTlLoSHlsdTYj/5sahBkYSHDOXa5slm3Pi9AjE8FpqulxdJXCDpRbIl6F\nqQWSG2hYe4iFoTQDVywub7mjjZAKgfX4xkrzZesZmU6xsPrP543j5sHPPOXpJ4Bb\nvSH85f3Fh8RROlmViWCKRvI=\n-----END PRIVATE KEY-----\n",
+  "client_email": "ip-project-videostorage@ip-project-videostorage.iam.gserviceaccount.com",
+  "client_id": "110359869495573027850",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/ip-project-videostorage%40ip-project-videostorage.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}

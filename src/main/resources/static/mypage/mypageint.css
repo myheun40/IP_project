@@ -1,0 +1,150 @@
+/* 기본 레이아웃 */
+.mypsidebar-container {
+  display: flex;
+  min-height: calc(100vh - 60px);
+  position: relative;
+  padding-bottom: 200px; /* footer 공간 확보 */
+  background-color:#f8f9fa ;
+}
+
+
+.mypsidebar-content {
+  flex: 1;
+  margin-left: 275px; /* 사이드바 너비만큼 마진 */
+  padding: 20px;
+}
+
+/* 기존 Content-Section 스타일 유지하면서 수정 */
+.Content-Section {
+  padding:0 50px;
+  margin-top: 150px;
+  width: 100%;
+}
+
+/* 스크롤바 숨기기 (기존 유지) */
+::-webkit-scrollbar {
+  display: none;
+}
+
+/* 카드 스타일 (기존 유지) */
+.card {
+  border-radius: 12px;
+  border: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+/* 테이블 스타일 (기존 유지) */
+.table th {
+  font-weight: 600;
+  color: #495057;
+}
+
+.table td {
+  color: #495057;
+}
+
+/* 배지 스타일 (기존 유지) */
+.badge {
+  padding: 8px 12px;
+  font-weight: normal;
+}
+
+/* 버튼 스타일 (기존 유지) */
+.btn-sm {
+  padding: 4px 8px;
+  font-size: 0.875rem;
+}
+
+/* 페이지네이션 스타일 (기존 유지) */
+.pagination .page-link {
+  color: #495057;
+  padding: 8px 12px;
+}
+
+.pagination .active .page-link {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+/* 폼 요소 스타일 (기존 유지) */
+.form-select, .form-control {
+  border-radius: 8px;
+  border-color: #e0e0e0;
+}
+
+/* footer 관련 스타일 추가 */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  background-color: #fff;
+}
+
+/* 반응형 처리 */
+@media (max-width: 768px) {
+  .mypsidebar-content {
+    margin-left: 0;
+  }
+}
+.main-content {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  padding: 20px;
+  margin-left: 0;  /* 사이드바가 있는 경우 여백 조정 */
+  overflow-x: hidden; /* 가로 스크롤 방지 */
+}
+
+.row {
+  width: 100%;
+  margin: 0;
+}
+
+/*글쓰기 팝업*/
+.write-btn {
+  padding: 8px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  transition: all 0.2s ease-in-out;
+}
+
+.write-btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.bi-pencil-square {
+  font-size: 1.1rem;
+}
+
+.modal-xl {
+  max-width: 80%;
+}
+
+.question-row {
+  border-top: 1px solid #dee2e6;
+  padding-top: 15px;
+}
+
+.add-question {
+  padding: 0.25rem 0.5rem;
+}
+
+.char-count {
+  color: #6c757d;
+  font-size: 0.875rem;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  border-color: #80bdff;
+}
+
+.btn-close:focus {
+  box-shadow: none;
+}
+
+.modal-body{
+  padding: 50px}

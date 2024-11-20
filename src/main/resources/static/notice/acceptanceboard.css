@@ -1,0 +1,175 @@
+.main-content{
+    margin-top: 100px;
+}
+
+.forum-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+}
+
+.forum-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.forum-title {
+    font-size: 1.8rem;
+    color: #1a1a1a;
+}
+
+.write-btn {
+    background: #31628b;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: 500;
+    transition: background-color 0.2s;
+}
+
+.write-btn:hover {
+    background: #4338CA;
+}
+
+.filter-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.filter-select {
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+.board-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.board-table th {
+    background: #f8f9fa;
+    padding: 1rem;
+    font-weight: 600;
+    color: #333;
+    text-align: left;
+    border-bottom: 2px solid #e9ecef;
+}
+
+.board-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #e9ecef;
+    color: #444;
+}
+
+.title-cell {
+    max-width: 400px;
+}
+
+.title-cell a {
+    color: #1a1a1a;
+    text-decoration: none;
+}
+
+.title-cell a:hover {
+    color: #31628b;
+}
+
+.company-badge {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    background: #e9ecef;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    color: #495057;
+    margin-right: 0.5rem;
+}
+
+.meta-info {
+    font-size: 0.9rem;
+    color: #6c757d;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.page-link {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    color: #31628b;
+    text-decoration: none;
+}
+
+.page-link.active {
+    background: #31628b;
+    color: white;
+    border-color: #31628b;
+}
+
+.page-link:hover:not(.active) {
+    background: #f8f9fa;
+}
+
+.search-section {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.search-input {
+    flex: 1;
+    padding: 0.75rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.search-btn {
+    padding: 0.75rem 1.5rem;
+    background: #31628b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.no-results {
+    text-align: center;
+    padding: 3rem;
+    color: #6c757d;
+}
+
+@media (max-width: 768px) {
+    .board-table th:nth-child(3),
+    .board-table td:nth-child(3) {
+        display: none;
+    }
+
+    .filter-section {
+        flex-direction: column;
+    }
+}

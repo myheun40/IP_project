@@ -1,0 +1,266 @@
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+.main-content{
+    padding-top: 50px;
+}
+/* Jumbotron styling */
+.jumbotron {
+    background-image: url('/resources/static/img/cor-001.png') !important;
+    margin-top:70px;
+    background-size: cover; /* 배경 이미지가 요소를 꽉 채우도록 설정 */
+    background-position: center; /* 배경 이미지가 가운데에 위치하도록 설정 */
+    background-repeat: no-repeat; /* 이미지 반복을 막음 */
+    color: #fff;
+    padding: 1.5rem 9.5rem;
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+}
+
+/* Section title styling */
+.section-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: left;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.content{
+    padding: 0 10% 0 10% !important;
+    display: flex;
+    flex-direction: column;
+}
+.col{
+    height:300px !important;
+    border: 2px solid #e1e1e1;
+    border-radius: 6px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* 카드 크기와 그림자에 애니메이션 적용 */
+}
+/* 카드 hover 효과 */
+.col:hover {
+    transform: scale(1.05); /* 카드 크기를 1.05배로 확대 */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 더 진한 그림자 추가 */
+}
+
+/* Card grid */
+.card {
+    background-color: #fff;
+    border: 1px solid #fdfdfd;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+}
+
+.card:hover {
+    background-color: #fdfdfd; 
+    transition: all 0.3s ease; /* Smooth transition for both color and transform */
+}
+
+
+.card-img-top {
+    height: 150px;
+    object-fit: cover;
+    border-bottom: 1px solid #fff;
+}
+
+.card-body {
+    padding-bottom: 5px;
+    background-color: #f9faff;
+}
+
+
+.card-title {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.card-text1 {
+    color: #555;
+}
+.card-text2 {
+    font-size: 10px;
+    color: #555;
+}
+
+/* review section */
+.row-cols-1 .card {
+    margin-bottom: 5px;
+}
+
+.blockquote-footer {
+    font-size: 0.9rem;
+    color: #999;
+}
+
+/* Add padding/margin to card sections */
+/*.row-cols-1, .row-cols-md-5 {*/
+/*    padding: 20px;*/
+/*    margin: 0 0 40px 0;*/
+/*}*/
+
+.card-body img {
+    border-radius: 5px; /* Adds slight rounding to the image */
+}
+
+.reviewcard-text {
+    font-size: 1rem;
+    color: #555;
+}
+.reviewcard {
+    border: 1px solid #ddd;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.reviewcard-body {
+    display: flex;
+    position: relative;
+    padding: 1.25rem;
+    min-height: 100px;
+}
+
+/* Image styling */
+.reviewcard img {
+    width: 100px;
+    height: auto;
+    margin-right: 15px;
+    object-fit: cover;
+}
+
+/* Title section */
+.corpreviewtitle {
+    flex: 0 0 200px; /* Fixed width */
+    margin-right: 15px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Content container */
+.content-wrapper {
+    flex: 1;
+    position: relative;
+    min-height: 100px;
+    overflow: hidden;
+}
+
+/* Always visible tags */
+.corpreviewtext1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px 0;
+}
+
+/* Hidden review text initially */
+.corpreviewtext2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    padding: 10px 0;
+}
+
+/* Hover effects */
+.reviewcard:hover {
+    border: 2px solid #8393FF;
+    transform: scale(1.02);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.reviewcard:hover .corpreviewtext1 {
+    opacity: 0;
+}
+
+.reviewcard:hover .corpreviewtext2 {
+    opacity: 1;
+}
+
+/* Review count */
+.review-count {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+}
+
+/* Tags styling */
+.corpreviewtext1 a {
+    display: inline-block;
+    margin: 2px;
+    padding: 2px 8px;
+    background: #f0f0f0;
+    border-radius: 12px;
+    text-decoration: none;
+    color: #555;
+}
+
+@media (max-width: 768px) {
+    .reviewcard-body {
+        flex-direction: column;
+    }
+    
+    .corpreviewtitle {
+        flex: 0 0 auto;
+        margin-bottom: 15px;
+    }
+    
+    .content-wrapper {
+        width: 100%;
+    }
+    
+    .corpreviewtext1, .corpreviewtext2 {
+        font-size: 12px;
+    }
+    
+    .reviewcard:hover {
+        transform: scale(1.01);
+    }
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 768px) {
+    .corpreviewtext1, .corpreviewtext2 {
+        font-size: 12px; /* Smaller font size for smaller screens */
+    }
+    .card:hover {
+        transform: scale(1.01); /* Slightly less zoom on smaller screens */
+    }
+}
+
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .jumbotron h1 {
+        font-size: 2rem;
+    }
+
+    .jumbotron p {
+        font-size: 1rem;
+    }
+
+    .card-body {
+        padding: 15px;
+    }
+
+    .card-title {
+        font-size: 1.1rem;
+    }
+}

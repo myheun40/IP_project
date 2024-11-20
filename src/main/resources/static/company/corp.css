@@ -1,0 +1,233 @@
+.main-content {
+  background: white;
+  padding-top: 50px;
+}
+
+/* Jumbotron styling */
+.jumbotron {
+  background-image: url('/resources/static/img/cor-001.png') !important;
+  background-size: cover; /* 배경 이미지가 요소를 꽉 채우도록 설정 */
+  background-position: center; /* 배경 이미지가 가운데에 위치하도록 설정 */
+  background-repeat: no-repeat; /* 이미지 반복을 막음 */
+  color: #fff;
+  padding: 1.5rem 9.5rem;
+  margin-top:70px;
+}
+
+.jumbotron h1 {
+  font-size: 2.5rem;
+}
+
+.jumbotron p {
+  font-size: 1.2rem;
+}
+.search-section {
+  padding: 50px 0;
+  text-align: center;
+}
+
+/* Table for 기업 최신 동향 */
+.news-table {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-collapse: collapse;
+}
+
+.news-table th,
+.news-table td {
+  border: 1px solid #dee2e6;
+  padding: 10px;
+  text-align: left;
+}
+
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+.news-table th, .news-table td {
+  border: 1px solid #ddd;
+  padding: 20px !important;
+  text-align: center;  /* 가운데 정렬 */
+}
+.news-table th {
+  background-color: #f2f2f2;
+}
+
+/*기업 정보 Section*/
+
+
+
+/**/
+
+
+
+/* SWOT CARD Styling */
+.swot-card {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* 가벼운 그림자 효과 */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* 부드러운 애니메이션 */
+  border-radius: 8px;               /* 둥근 모서리 */
+  padding: 20px 5px;                    /* 내부 여백 */
+  min-height: 400px; /* 최소 높이 설정 */
+  /*border-radius: 8px;*/
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);*/
+  /*padding: 20px;*/
+  /*text-align: left;*/
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  /*justify-content: flex-start;*/
+  /*height: auto; !* 고정 높이 제거 *!*/
+  /*overflow: auto; !* 넘치는 내용을 숨김 *!*/
+  /*box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);*/
+  /*transition: transform 0.3s ease; !* 부드러운 변환 효과 *!*/
+}
+
+/*#S{*/
+/*  background-color: #cae1f9;*/
+/*}*/
+/*#W{*/
+/*  background-color: #ffcd6f;*/
+/*}*/
+/*#O{*/
+/*  background-color: #d9eb9f;*/
+/*}*/
+/*#T{*/
+/*  background-color: #ffd5d5;*/
+/*}*/
+
+.swot-card:hover {
+  transform: scale(1.05);           /* Hover 시 살짝 확대 */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* 그림자 강화 */
+}
+
+.swot-letter {
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #ffffff;                   /* 문자 색상 */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80px;
+  width: 80px;
+  margin: 0 auto 10px;
+  border-radius: 50%;               /* 원형 배경 */
+}
+.card-body h5{
+  font-weight: bold;
+}
+/* 각 SWOT 요소에 맞는 색상 */
+.swot-letter-S { color: #65a9f9; } /* Strengths - */
+.swot-letter-W { color: #ffc11b; } /* Weaknesses - 주황색 */
+.swot-letter-O { color: #78b746; } /* Opportunities -  */
+.swot-letter-T { color: #e56a76; }
+
+h1.swot-letter-S +h5 { color: #65a9f9; } /* Strengths - */
+h1.swot-letter-W +h5 { color: #ffc11b; } /* Weaknesses -  */
+h1.swot-letter-O +h5 { color: #78b746; } /* Opportunities -  */
+h1.swot-letter-T +h5 { color: #e56a76; }
+
+/* 내용 텍스트 스타일 */
+.card-text {
+  color: #666666;
+  line-height: 1.6;                 /* 줄 간격 */
+  font-size: 0.95rem;
+  text-align: left;
+}
+
+.swot-card h5 {
+  font-size: 1.5rem;
+  margin-bottom: 50px;
+}
+
+.swot-card ul {
+  font-size: 1rem;
+  padding-left: 20px;
+  list-style: none;
+}
+
+.swot-card ul li {
+  font-size:1rem;
+  margin-bottom: 10px;
+}
+
+
+/*패널 부분*/
+.tab-pane {
+  height: 600px;
+  /* 원하는 최대 높이 설정 */
+  overflow-y: auto;
+  /* 세로 스크롤 적용 */
+}
+
+#strength {
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+}
+
+#weakness {
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+}
+#opportunity {
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+}
+
+#threat {
+  background-color: #f0f0f0;
+  background-size: cover;
+  background-position: center;
+}
+
+/**/
+
+
+
+
+/* Table for 기업 최신 동향 */
+.news-table {
+  width: 100%;
+  background-color: #f8f9fa;
+  border-collapse: collapse;
+  border: 1px solid #e5e5e5;
+}
+
+.news-table th,
+.news-table td {
+  border: 0px;
+  padding: 20px;
+  text-align: left;
+  border-bottom: 0.8rem solid white;
+}
+
+.news-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.news-table th {
+  background-color: #f2f2f2;
+}
+
+.news-table img {
+  width: 250px;
+  height: 150px;
+}
+
+#newsTableBody tr td a{
+  text-decoration:none;
+}
+
+#newsTableBody tr td a p{
+  color: black;
+  font-weight: bold;
+}
+
+#newsTableBody tr td a p:hover{
+  color: #3b3ec5;
+  font-weight: bold;
+  text-decoration: underline;
+}
+

@@ -1,0 +1,129 @@
+/* Base Styles */
+body {
+    font-family: 'Noto Sans KR', sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+.main-content{
+    margin-top: 50px;
+}
+.content-wrapper {
+    padding: 2rem 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* jumbotron */
+.jumbotron {
+    background-image: url('/resources/static/img/ai-banner13.png');
+    background-size: cover; /* 배경 이미지가 요소를 꽉 채우도록 설정 */
+    background-position: center; /* 배경 이미지가 가운데에 위치하도록 설정 */
+    background-repeat: no-repeat; /* 이미지 반복을 막음 */
+    color: #fff;
+    /*border-radius: 10px;*/
+    padding: 2.5rem 9.5rem;
+    /*margin-left: 10%;*/
+    /*margin-right: 10%;*/
+    margin-top:70px;
+}
+
+.jumbotron h1 {
+    font-size: 2.5rem;
+    font-family: 'Noto Sans KR';
+}
+
+.jumbotron p {
+    font-size: 1.2rem;
+    font-family: 'Noto Sans KR';
+}
+
+
+/* Board Layout */
+.board-container {
+    padding: 1rem;
+}
+
+.board-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+    gap: 2rem;
+}
+
+.board-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: transform 0.2s;
+}
+
+/* Board Header */
+.board-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.board-header h2 {
+    font-size: 1.25rem;
+    margin: 0;
+    color: #31628b;
+}
+
+/* Buttons */
+.btn-write {
+    background-color: #31628b;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 2rem;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.875rem;
+    transition: background-color 0.2s;
+}
+
+.btn-write:hover {
+    background-color: #1e3b53;
+}
+
+.btn-write.admin {
+    background-color: #75c9e9;
+}
+
+.btn-write.admin:hover {
+    background-color: #5bb1d1;
+}
+
+/* Table Styles */
+.board-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+}
+
+.board-table th {
+    text-align: left;
+    padding: 1rem;
+    font-weight: 500;
+    color: #666;
+    border-bottom: 2px solid #d6d6d6;
+    white-space: nowrap;
+}
+
+.board-table td {
+    padding: 1rem;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* Category Cell Styles */
+.post-category {
+    text-align: center;
+    font-size: 0.875rem;
+    padding: 0.5rem !important;
+}

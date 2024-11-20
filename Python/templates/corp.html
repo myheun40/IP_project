@@ -1,0 +1,37 @@
+<!-- templates/corp.html -->
+<section class="container my-5">
+    <h2>기업 최신 동향</h2>
+    <table class="news-table">
+        <thead>
+        <tr>
+            <th>번호</th>
+            <th style="width:100px;">이미지</th>
+            <th style="width:900px;">제목</th>
+            <th>내용</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for article in articles %}
+        <tr>
+            <td>{{ loop.index }}</td>
+            <td>
+                <a href="{{ article.url }}" target="_blank">
+                    {% if article.image_url %}
+                    <img src="{{ article.image_url }}" alt="뉴스 이미지" style="width:100px;">
+                    {% else %}
+                    <img src="{{ url_for('static', filename='img/no-image.png') }}" alt="이미지 없음" style="width:100px;">
+                    {% endif %}
+                </a>
+            </td>
+            <td style="text-align:left">
+                <a href="{{ article.url }}" target="_blank">
+                    <p>{{ article.title }}</p>
+                </a>
+                <span>{{ article.description }}</span>
+            </td>
+            <td>{{ article.date }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</section>

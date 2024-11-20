@@ -1,0 +1,56 @@
+spring:
+  datasource:
+    url: jdbc:oracle:thin:@project-db-stu3.smhrd.com:1524/XE
+    username: Insa5_SpringA_final_1
+    password: aischool1
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: none
+    show-sql: true
+    database-platform: org.hibernate.dialect.OracleDialect
+    properties:
+      hibernate:
+        format_sql: true
+  mvc:
+    view:
+      prefix: /WEB-INF/views/
+      suffix: .jsp
+    static-path-pattern: /resources/static/**
+  profiles:
+    include: oauth
+  security:
+    oauth2:
+      client:
+        registration:
+          google:
+            redirect-uri: "{baseUrl}/login/oauth2/code/{registrationId}"
+  servlet:
+    multipart:
+      max-file-size: 500MB
+      max-request-size: 500MB
+file:
+  upload:
+    directory: uploads/videos
+
+
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.web.servlet.view: TRACE
+    org.apache.jasper: DEBUG
+    org.apache.catalina.core.ApplicationDispatcher: TRACE
+    com.ip_project: DEBUG
+server:
+  port: 8081
+  servlet:
+    context-path: /
+    jsp:
+      init-parameters:
+        development: true  # JSP 개발 모드 활성화
+debug: true
+python:
+  script:
+    path=C:/Users/USER/Desktop/실전프로젝트/back/IP_Project/Python/interview_generator:
+      py:

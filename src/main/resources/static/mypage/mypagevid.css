@@ -1,0 +1,252 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+	line-height: 1.6;
+	color: #333;
+	background-color: #f5f5f5;
+	overflow-x: hidden;
+}
+
+/* Layout */
+.mypcontent {
+	padding: 100px 50px;
+	margin: 10px;
+	position: relative;
+}
+
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 2rem;
+}
+
+.main-content {
+	padding-top: 80px;
+	transition: margin-right 0.3s ease;
+}
+
+.main-content.video-active {
+	margin-right: 400px;
+}
+
+.row {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 2rem;
+	margin-bottom: 2rem;
+}
+
+.col-6 {
+	flex: 1;
+	min-width: 300px;
+}
+
+/* Video Toggle Button */
+.video-toggle {
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	background-color: #4a90e2;
+	color: white;
+	border: none;
+	border-radius: 50%;
+	width: 60px;
+	height: 60px;
+	cursor: pointer;
+	z-index: 1000;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+	transition: all 0.3s ease;
+}
+
+.video-toggle i {
+	font-size: 24px;    /* 아이콘 크기 증가 */
+}
+
+
+.video-toggle:hover {
+	background-color: #357abd;
+}
+
+/* Video section */
+.video-section {
+	position: fixed;
+	right: -90vw;
+	top: 0;
+	bottom: 0;
+	width: 90vw;
+	background-color: white;
+	transition: transform 0.3s ease;
+	z-index: 999;
+	padding: 1.5rem;
+	margin-top: 80px;
+	margin-bottom: 20px;
+	box-shadow: -4px 0 15px rgba(0, 0, 0, 0.08);
+	overflow-y: auto;
+}
+
+
+.video-section.active {
+	transform: translateX(-90vw);
+}
+
+.video-preview {
+	background-color: white;
+	border-radius: 12px;
+	padding: 1rem;
+	margin-bottom: 2rem;
+	height: calc(100vh - 200px); /* Taller video container */
+}
+.video-box {
+	display: block;
+	background-color: #f8f9fa;
+	border-radius: 8px;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+}
+.video-close {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: none;
+	border: none;
+	font-size: 24px;
+	cursor: pointer;
+	color: #4a5568;
+	width: 40px;
+	height: 40px;
+	display: flex; /* 'none' 대신 'flex' 사용 */
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	transition: background-color 0.2s ease;
+	z-index: 1001;
+}
+#interviewVideo {
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+/* Questions section */
+.video-questions {
+	background-color: white;
+	border-radius: 12px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+
+.section-title {
+	font-size: 1.5rem;
+	color: #2d3748;
+	margin-bottom: 1.5rem;
+	font-weight: 600;
+}
+
+.question-item {
+	margin-bottom: 1rem;
+}
+
+.question-button {
+	width: 100%;
+	text-align: left;
+	padding: 1rem;
+	background-color: #f8f9fa;
+	border: 1px solid #e2e8f0;
+	border-radius: 8px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	font-size: 0.95rem;
+}
+
+.question-button:hover {
+	background-color: #edf2f7;
+	transform: translateY(-1px);
+}
+
+.question-button.active {
+	margin-right: 90%;
+	background-color: #e2e8f0;
+	border-left: 4px solid #4a90e2;
+}
+
+.question-number {
+	font-weight: 600;
+	color: #4a5568;
+	margin-right: 0.5rem;
+}
+
+/* Answer section */
+.answer-box-info {
+	background-color: white;
+	border-radius: 12px;
+	padding: 1.5rem;
+	box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+	margin-top: 2rem;
+}
+
+.answer-box {
+	display: none;
+	background-color: #f8f9fa;
+	padding: 1.5rem;
+	border-radius: 8px;
+	margin-bottom: 1.5rem;
+}
+
+.answer-box.active {
+	display: block;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+	.video-section {
+		width: 100%;
+		right: -100%;
+	}
+	
+	.main-content.video-active {
+		margin-right: 0;
+	}
+	
+	.main-content.video-active {
+		margin-right: 0;
+	}
+	
+	.video-toggle {
+		right: 10px;
+	}
+	
+	.row {
+		flex-direction: column;
+	}
+	
+	.col-6 {
+		width: 100%;
+	}
+	
+	.main-content {
+		padding-top: 60px;
+	}
+	
+	.mypcontent {
+		padding: 50px 20px;
+	}
+}
+
+/* Hide scrollbar but keep functionality */
+::-webkit-scrollbar {
+	display: none;
+}
+
+* {
+	-ms-overflow-style: none;
+	scrollbar-width: none;
+}

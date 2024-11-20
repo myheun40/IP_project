@@ -1,0 +1,356 @@
+/* interview-view.css */
+:root {
+    --primary-color: #31628b;
+    --background-color: #f8fafc;
+    --card-background: #ffffff;
+    --text-primary: #1a1a1a;
+    --text-secondary: #666666;
+    --danger-color: #dc2626;
+    --border-radius: 12px;
+    --spacing-unit: 1.5rem;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
+    --transition: all 0.2s ease;
+}
+
+/* Base Styles */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    line-height: 1.6;
+    background-color: var(--background-color);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.result-tag{
+    display:none;
+    color: white;
+    align-items: center;
+    border: none;
+    border-radius: 20px;
+    padding: 5px 12px;
+    font-size: 12px;
+}
+/* CSS */
+.result-tag.pass {
+
+    display: inline-flex;
+    background-color: #ebd052; /* 합격일 때 */
+}
+
+.result-tag.fail {
+    background-color: #e38e86; /* 불합격일 때 */
+    color: white;
+    display:block;
+}
+
+.result-tag.pending {
+    background-color: #8b807f; /* 결과 대기중일 때 */
+    color: white;
+    display:block;
+}
+
+.main-content {
+    max-width: 800px;
+    margin: 120px auto 60px;
+    padding: 0 20px;
+}
+
+/* Navigation and Actions */
+.nav-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.back-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--text-secondary);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    transition: var(--transition);
+    background: var(--card-background);
+    border: 1px solid #e5e7eb;
+}
+
+.back-button:hover {
+    background: #f8fafc;
+    color: var(--text-primary);
+}
+
+.action-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+.action-button {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.edit-button {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.edit-button:hover {
+    background-color: #1e3b53;
+}
+
+.delete-button {
+    background-color: #fee2e2;
+    color: var(--danger-color);
+}
+
+.delete-button:hover {
+    background-color: #fecaca;
+}
+
+/* Interview Card */
+.interview-card {
+    background: var(--card-background);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    margin-bottom: var(--spacing-unit);
+}
+
+.interview-header {
+    padding: var(--spacing-unit);
+    border-bottom: 1px solid #eef2f6;
+}
+
+.metadata-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.tag {
+    background: #f1f5f9;
+    color: var(--text-secondary);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 0.875rem;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.tag i {
+    font-size: 0.75rem;
+}
+
+.interview-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    margin: 0;
+}
+
+/* Question Sections */
+.question-container {
+    padding: var(--spacing-unit);
+}
+
+.question-block {
+    margin-bottom: 2rem;
+}
+
+.question-block:last-child {
+    margin-bottom: 0;
+}
+
+.question {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.question-number {
+    background: var(--primary-color);
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.875rem;
+}
+
+.answer {
+    color: var(--text-secondary);
+    line-height: 1.8;
+    padding-left: 40px;
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal-content {
+    background-color: var(--card-background);
+    padding: 24px;
+    border-radius: var(--border-radius);
+    width: 90%;
+    max-width: 400px;
+    position: relative;
+}
+
+.modal-header {
+    margin-bottom: 20px;
+}
+
+.modal-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.modal-body {
+    margin-bottom: 24px;
+    color: var(--text-secondary);
+}
+
+.modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+}
+
+.modal-button {
+    padding: 8px 16px;
+    border-radius: var(--border-radius);
+    border: none;
+    cursor: pointer;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.modal-cancel {
+    background-color: #e5e7eb;
+    color: var(--text-secondary);
+}
+
+.modal-cancel:hover {
+    background-color: #d1d5db;
+}
+
+.modal-confirm {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.modal-confirm:hover {
+    background-color: #b91c1c;
+}
+.format-toggle {
+	display: flex;
+	gap: 10px;
+	margin-bottom: 20px;
+	padding: 0 var(--spacing-unit);
+}
+
+.toggle-btn {
+	margin-top: 10px;
+	padding: 8px 16px;
+	border: 1px solid #e5e7eb;
+	background-color: white;
+	border-radius: var(--border-radius);
+	cursor: pointer;
+	transition: all 0.2s;
+	font-size: 0.875rem;
+}
+
+.toggle-btn.active {
+	background-color: var(--primary-color);
+	color: white;
+	border-color: var(--primary-color);
+}
+
+#free-format, #qa-format {
+	display: none;
+}
+
+#free-format.active, #qa-format.active {
+	display: block;
+}
+
+.dummy-warning {
+	background-color: #fff3cd;
+	color: #856404;
+	padding: 10px;
+	margin: 10px var(--spacing-unit);
+	border-radius: var(--border-radius);
+	font-size: 0.875rem;
+	display: flex;
+	align-items: center;
+	gap: 8px;
+}
+
+/* Responsive Styles */
+@media (max-width: 640px) {
+    .main-content {
+        margin-top: 100px;
+    }
+
+    .nav-actions {
+        flex-direction: column;
+        gap: 16px;
+        align-items: stretch;
+    }
+
+    .action-buttons {
+        justify-content: stretch;
+    }
+
+    .action-button {
+        flex: 1;
+        justify-content: center;
+    }
+
+    .metadata-tags {
+        gap: 8px;
+    }
+
+    .tag {
+        padding: 4px 10px;
+        font-size: 0.813rem;
+    }
+
+    .interview-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-content {
+        margin: 0 16px;
+    }
+}

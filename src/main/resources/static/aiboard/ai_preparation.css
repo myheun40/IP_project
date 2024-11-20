@@ -1,0 +1,395 @@
+/* Base Styles */
+body {
+  background-color: white;
+  transition: background-color 1s ease;
+  font-family: 'Noto Sans KR', sans-serif;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+.main-content {
+  padding-top: 150px;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Common Styles */
+.border-radius-standard {
+  border-radius: 8px;
+}
+
+/* Card Layout */
+.camera-card {
+  background: #ffffff;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+  padding: 2rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+  min-height: 750px;
+  display: flex;
+}
+
+/* Column Layout */
+.video-column {
+  flex: 1;
+  max-width: calc(100% - 380px); /* 우측 컬럼 너비를 뺀 나머지 */
+}
+
+.control-column {
+  width: 380px; /* 고정 너비 */
+  flex-shrink: 0;
+}
+
+
+.transcript-column {
+  flex: 0 0 33%;
+  max-width: 33%;
+  margin-left:30px;
+  margin-top: 50px;
+}
+
+/* Video Section */
+.video-section {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 1.5rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.video-area {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.video-container {
+  background: #000;
+  border-radius: 12px;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  margin: 1rem 0;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+
+}
+.video-container video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Headers */
+/*.setup-header,*/
+/*.question-header {*/
+/*  margin-bottom: 1.5rem;*/
+/*}*/
+
+.question-header {
+  display: flex;
+  flex-direction: column;
+}
+
+.setup-header h5,
+.question-header h5 {
+  color: #1a1a1a;
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.setup-header p {
+  color: #666;
+  font-size: 1rem;
+  margin-bottom: 0;
+}
+
+/* Current Question */
+.current-question {
+  background: #f0f4ff;
+  border-left: 4px solid #4C6EF5;
+  padding: 0.75rem 1rem;
+  border-radius: 0 8px 8px 0;
+  margin-bottom: 1rem;
+}
+
+.question-number {
+  color: #4C6EF5;
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+}
+
+.question-content {
+  font-size: 1.1rem;
+  color: #1a1a1a;
+  margin-bottom: 0;
+}
+
+/* Forms and Controls */
+.form-section {
+  background: #ffffff;
+  padding: 0.5em 1.5rem;
+  border-radius: 12px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
+.form-control {
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 0.75rem;
+  background: #f8f9fa;
+}
+
+.form-control:disabled {
+  color: #495057;
+}
+
+/* Buttons */
+.btn {
+  border: none;
+  border-radius: 8px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.btn-load {
+  background: #020202;
+  color: white;
+  padding: 0.75rem 1.5rem;
+}
+
+.btn-load:hover {
+  background: #474747;
+  color:white;
+}
+
+.btn-start {
+  background: rgb(88 176 241);
+  color: white;
+  padding: 0.75rem 1rem;
+  margin-top: 1rem;
+}
+
+.btn-start:hover {
+  background: #364FC7;
+  color:white;
+}
+
+/* Recording Controls */
+.recording-controls {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-record {
+  flex: 1;
+  padding: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.btn-record.start {
+  background: rgb(88 176 241);
+  color: white;
+  border:none;
+  border-radius: 8px;
+}
+
+.btn-record.stop {
+  background: #f14b4b;
+  color: white;
+  border:none;
+  border-radius: 8px;
+}
+
+/* Transcript Section */
+.transcript-section {
+  background: white;
+  border-radius: 12px;
+  padding: 1.5rem;
+  max-height: 650px;
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
+}
+
+.transcript-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.transcript-list {
+  flex: 1;
+  overflow-y: scroll;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+}
+
+.transcript-list::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
+}
+
+.transcript-item {
+  padding: 1rem;
+  border-left: 2px solid #e0e0e0;
+  margin-bottom: 1rem;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  background: #ffffff;
+}
+
+.transcript-item:hover {
+  border-left-color: #4C6EF5;
+  background: #f8f9fa;
+}
+
+.transcript-item.expanded {
+  background: #f0f4ff;
+  border-left-color: #4C6EF5;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.transcript-question {
+  font-size: 0.9rem;
+  color: #666;
+  margin-bottom: 0.5rem;
+}
+
+.transcript-answer {
+  display: none; /* Hide by default */
+  color: #1a1a1a;
+  line-height: 1.6;
+  padding-top: 0.5rem;
+}
+
+.transcript-item.expanded .transcript-answer {
+  display: block; /* Show when parent is expanded */
+}
+/* Indicators */
+.video-error {
+  background: #fee2e2;
+  color: #dc2626;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.recording-indicator {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  background: rgba(220, 38, 38, 0.9);
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  z-index: 1000;
+}
+
+
+.recording-dot {
+  width: 8px;
+  height: 8px;
+  background: #ff0000;
+  border-radius: 50%;
+  display: inline-block; /* 추가 */
+  animation: blink 1s infinite;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 0 20px 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 800px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h5 {
+  font-weight: bold;
+}
+
+.modal-content p {
+  font-size: 16px;
+  color: #333;
+}
+
+.modal-content ul {
+  list-style: none;
+  padding: 0;
+}
+
+.modal-content li {
+  border: 1px solid #000000;
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.modal-content li:hover {
+  background-color: #0c0c0c;
+  color: white;
+}
+
+.close {
+  color: #090909;
+  margin-left: 97%;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: darkred;
+  text-decoration: none;
+}
+
+/* Animations */
+@keyframes blink {
+  0% { opacity: 1; }
+  50% { opacity: 0.4; }
+  100% { opacity: 1; }
+}
